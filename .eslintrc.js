@@ -22,6 +22,12 @@ module.exports = {
     // allow async-await
     'generator-star-spacing': 0,
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'semi': ['error', 'always'],
+    'no-extra-semi': 1,
+    'no-whitespace-before-property': 1,
+    'no-mixed-spaces-and-tabs': 0,
+    'spaced-comment': 1,
+    'indent': 1 
   }
 }

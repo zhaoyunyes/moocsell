@@ -1,6 +1,6 @@
 <template>
   <div calss="header">
-    我是header组件
+    我是seller组件
   </div>
 </template>
 <script>
