@@ -1,6 +1,6 @@
 # sell
 
-> 慕课网上的vue饿了么实战项目,学习ing
+> 慕课网上的vue饿了么实战项目，学习ing
 
 ## Build Setup
 
