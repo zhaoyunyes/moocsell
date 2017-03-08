@@ -2,21 +2,21 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import VueResource from 'vue-resource';
 import App from '@src/App';
 import goods from '@components/goods/goods.vue';
 import ratings from '@components/ratings/ratings.vue';
 import seller from '@components/seller/seller.vue';
 
-import '@common/stylus/index.styl';
+import '@stylus/site.styl';
 
 Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
+Vue.use(VueResource);
 
+// 定义路由
 const routes = [{
-  path: '/',
-  component: goods
-}, {
   path: '/goods',
   component: goods
 }, {
@@ -36,5 +36,10 @@ let router = new VueRouter({
 new Vue({
   el: '#app',
   router,
+  mounted: function () {
+    this.$nextTick(function () {
+      router.replace('/goods');
+    });
+  },
   render: h => h(App)
 });

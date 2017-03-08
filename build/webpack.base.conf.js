@@ -25,7 +25,8 @@ module.exports = {
       '@': resolve('src'),
       '@components': path.resolve(__dirname, '../src/components'),
       '@src': path.resolve(__dirname, '../src'),
-      '@common': path.resolve(__dirname,'../src/common')
+      '@common': path.resolve(__dirname, '../src/common'),
+      '@stylus': path.resolve(__dirname,'../src/common/stylus')
     }
   },
   module: {
