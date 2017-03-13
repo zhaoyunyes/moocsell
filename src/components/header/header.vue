@@ -19,11 +19,19 @@
           <span class="icon" :class="classMap[seller.supports[0].type]"></span>
           <span class="text">{{ seller.supports[0].description }}</span>
         </div>
+        <div class="support-count" v-if="seller.supports">
+          <span class="count">{{ seller.supports.length }}个</span>
+          <i class="icon-keyboard_arrow_right"></i>
+        </div>
       </div>
     </div>
     <!-- 主要信息 结束 -->
     <!-- 公告 -->
-    <div class="bulletin-wrapper"></div>
+    <div class="bulletin-wrapper">
+      <span class="title"></span>
+      <span class="text">{{ seller.bulletin }}</span>
+      <i class="icon-keyboard_arrow_right"></i>
+    </div>
     <!-- 公告 结束 -->
   </div>
 </template>
@@ -45,8 +53,9 @@
 @import "../../common/stylus/mixin.styl"
 .header
   color: #fff
-  background-color: #000
+  background-color: #999
   .content-wrapper
+    position: relative
     padding: 24px 12px 18px 24px
     font-size: 0
     .avatar
@@ -97,5 +106,35 @@
           &.guarantee
             bg-img("guarantee_1")
         .text
-          font-size: 10px   
+          font-size: 10px
+          line-height: 12px
+    .support-count
+      position: absolute
+      right: 12px
+      bottom: 14px
+      padding: 0 8px
+      height: 24px
+      font-size: 0
+      font-weight: 200
+      line-height: 24px
+      color: rgb(255,255,255)
+      text-align: center
+      background-color: rgba(0,0,0,.2)
+      border-radius: 14px
+      .count
+        font-size: 10px
+        vertical-align: top
+      .icon-keyboard_arrow_right
+        margin-left: 2px
+        font-size: 10px
+        line-height: 24px
+        vertical-align: top
+  .bulletin-wrapper
+    height: 28px
+    padding: 0 12px
+    color: rgb(255,255,255)
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
 </style>
